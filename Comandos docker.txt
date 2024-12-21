@@ -1,0 +1,26 @@
+correr el Docker
+docker-compose up --build
+
+entrar a la consola del docker
+docker exec -it mysql_mercado_libre bash
+
+te conectas a MySQL
+mysql -u root -p
+
+colocas esta constraseña
+rootpassword
+
+muestra la base de datos 
+SHOW DATABASES;
+
+usa la base de datos de mercado_libre
+USE mercado_libre;
+
+mostrar tablas
+SHOW TABLES;
+
+ver contenido de una tabla 
+SELECT * FROM Usuario;
+
+salir de la terminal 
+exit

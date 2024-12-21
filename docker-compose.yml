@@ -1,0 +1,15 @@
+version: '3.8'
+# Author: Andres Felipe Melo Avellaneda
+# Correo: andrespipemelo@gmail.com
+services:
+  db:
+    build: .
+    container_name: mysql_mercado_libre
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mercado_libre
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./BaseDeDatos.sql:/docker-entrypoint-initdb.d/BaseDeDatos.sql
+      - ./datosPrueba.sql:/docker-entrypoint-initdb.d/datosPrueba.sql
